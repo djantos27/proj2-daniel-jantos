@@ -1,0 +1,8 @@
+.posts_table td, .posts_taable th {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.posts_table {
+    border-collapse: collapse;
+}
