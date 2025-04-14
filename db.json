@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Title 1",
+      "content": "Content ABC"
+    },
+    {
+      "id": "99",
+      "title": "ANOTHER POST",
+      "content": "MORE CONTENT"
+    },
+    {
+      "id": "9",
+      "title": "test",
+      "content": "test"
+    },
+    {
+      "id": "10",
+      "title": "bla bal",
+      "content": "bla bla"
+    },
+    {
+      "id": "12",
+      "title": "asfsf",
+      "content": "asdfsa"
+    }
+  ]
+}
