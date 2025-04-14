@@ -2,7 +2,7 @@ import styles from "./styles.modules.css";
 
 export default async function Posts()
 {
-    const data = fetch("http://localhost:4000/posts");
+    const data = await fetch("http://localhost:4000/posts");
     const posts = await data.json();
 
     return (
