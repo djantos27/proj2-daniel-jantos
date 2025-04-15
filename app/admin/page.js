@@ -2,6 +2,7 @@
 //              with ability to click on edit or delete
 
 import styles from "./styles.module.css";
+import Link from "next/link";
 
 export default async function Books()
 {
