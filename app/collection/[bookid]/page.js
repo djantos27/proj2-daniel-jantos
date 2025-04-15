@@ -18,7 +18,7 @@ export default async function Singlebook({params})
             )
         }
     const book = await data.json();
-    console.log("this is book data", book)
+    //console.log("this is book data", book)
 
     return (
         <div>
@@ -43,13 +43,17 @@ export default async function Singlebook({params})
 
 // Generate static params
 
-export async function generateStaticParams({params})
+export async function generateStaticParams()
 {
     //const { bookid } = await params;
     const data = await fetch("http://localhost:4000/books");
     const books = await data.json();
 
-    return books.map( (book) => ({
+    console.log(books.slice(0,10));
+
+    const slicebook = books.slice(0,10);
+
+    return slicebook.map( (book) => ({
         bookid: book.id
     } ));
 }
