@@ -8,7 +8,12 @@ export default async function Singlebook({params})
     const data = await fetch(`http://localhost:4000/books/${params.bookid}`);
     if (!data.ok) 
         {
-        return <h1>Book not found</h1>;
+        return (
+            <div>
+                <h1>Book not found</h1>
+                <h2><Link href={`/collection`}>Back</Link></h2>
+            </div>
+            )
         }
     const book = await data.json();
 
@@ -26,9 +31,9 @@ export default async function Singlebook({params})
                     </tr>
                     <br>
                     </br>
-                    <tr><Link href={`/collection`}>Back</Link></tr>
                 </thead>
             </table>
+            <h2><Link href={`/collection`}>Back</Link></h2>
         </div>
     )
 }
