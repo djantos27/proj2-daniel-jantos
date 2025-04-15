@@ -36,24 +36,25 @@ export default async function Edit({params})
             </table>
             <br>
             </br>
+            <br />
+            <form>
+                <label htmlFor="bookid">Book ID: </label>&nbsp;
+                <input type="text" name="bookid" id="bookid" />
+                <br />
+                <label htmlFor="title">Title: </label>&nbsp;
+                <input type="text" name="title" id="title" />
+                <br />
+                <label htmlFor="author">Author: </label>&nbsp;
+                <input type="text" name="author" id="author" />
+                <br />
+                <label htmlFor="year">Year Published: </label>&nbsp;
+                <input type="integer" name="year" id="year" />
+                <br />
+                <label htmlFor="image">Link to Cover jpeg: </label>&nbsp;
+                <input type="jpeg" name="image" id="image" />
+                <br />
+            </form>
             <h2><Link href={`/admin`}>Back</Link></h2>
         </div>
     )
-}
-
-// Generate static params
-
-export async function generateStaticParams()
-{
-    //const { bookid } = await params;
-    const data = await fetch("http://localhost:4000/books");
-    const books = await data.json();
-
-    //console.log(books.slice(0,10));
-
-    const slicebook = books.slice(0,10);
-
-    return slicebook.map( (book) => ({
-        bookid: book.id
-    } ));
 }
