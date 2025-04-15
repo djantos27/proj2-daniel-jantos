@@ -1,8 +1,8 @@
-.posts_table td, .posts_taable th {
+.books_table td, .books_table th {
     border: 1px solid black;
     padding: 5px;
 }
 
-.posts_table {
+.books_table {
     border-collapse: collapse;
 }

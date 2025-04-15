@@ -1,29 +1,41 @@
 {
-  "posts": [
+  "books": [
     {
       "id": "1",
-      "title": "Title 1",
-      "content": "Content ABC"
+      "title": "Book 1",
+      "author": "Lyle",
+      "year": "1203",
+      "image": "jpeg"
     },
     {
-      "id": "99",
-      "title": "ANOTHER POST",
-      "content": "MORE CONTENT"
+      "id": "2",
+      "title": "Book 2",
+      "author": "Bruce",
+      "year": "2012",
+      "image": "jpeg"
     },
     {
-      "id": "9",
-      "title": "test",
-      "content": "test"
+      "id": "3",
+      "title": "Book 3",
+      "author": "Dale",
+      "year": "2015",
+      "image": "jpeg"
     },
     {
-      "id": "10",
-      "title": "bla bal",
-      "content": "bla bla"
+      "id": "4",
+      "title": "Book 4",
+      "author": "Rita",
+      "year": "2019",
+      "image": "jpeg"
+      
     },
     {
-      "id": "12",
-      "title": "asfsf",
-      "content": "asdfsa"
+      "id": "5",
+      "title": "Book 5",
+      "author": "Alex",
+      "year": "2017",
+      "image": "jpeg"
+      
     }
   ]
 }
