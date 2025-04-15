@@ -13,6 +13,11 @@ export default async function Books()
                     <tr>
                         <th>ID</th>
                         <th>Title</th>
+                        <th>Author</th>
+                        <th>Year</th>
+                        <th>Cover</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -21,6 +26,11 @@ export default async function Books()
                             <tr key ={book.id}>
                                 <td>{book.id}</td>
                                 <td>{book.title}</td>
+                                <td>{book.author}</td>
+                                <td>{book.year}</td>
+                                <td>{book.image}</td>
+                                <td>E</td>
+                                <td>D</td>
                             </tr>
                         )   )
                     }
