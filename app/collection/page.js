@@ -2,6 +2,8 @@
 //                      each item should also have a "more" link, that once clicked will bring
 //                      them to a page with all the data from that item, and a button to go "back"
 
+import Link from "next/link";
+
 export default async function List()
 {
     const data = await fetch("http://localhost:4000/books");
@@ -15,7 +17,7 @@ export default async function List()
                             <ul key ={book.id}>
                                 <dt>{book.id}&nbsp;
                                     {book.title}&nbsp;
-                                    <link href={'/collection/${book.id}'}>More</link></dt>
+                                    <Link href={'/collection/${book.id}'}>More</Link></dt>
                             </ul>
                         )   )
                     }
