@@ -43,12 +43,13 @@ export default async function Singlebook({params})
 
 // Generate static params
 
-// export async function generateStaticParams()
-// {
-//     const data = await fetch("http://localhost:4000/books");
-//     const books = await data.json();
+export async function generateStaticParams({params})
+{
+    //const { bookid } = await params;
+    const data = await fetch("http://localhost:4000/books");
+    const books = await data.json();
 
-//     return books.map( (book) =>{
-//         booksid: book.id
-//     } );
-// }
+    return books.map( (book) => ({
+        bookid: book.id
+    } ));
+}
