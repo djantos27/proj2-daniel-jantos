@@ -22,21 +22,31 @@ export default async function Edit({params})
 
     return (
         <div>
-            <h1>{book.title}</h1>
+            <h1>Current Data:</h1>
             <table className={styles.books_table}>
                 <thead>
                     <tr>
-                        <th>{book.id}</th>
-                        <th>{book.title}</th>
-                        <th>{book.author}</th>
-                        <th>{book.year}</th>
-                        <th>{book.image}</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Year</th>
+                        <th>Cover</th>
                     </tr>
                 </thead>
+                <tbody>
+                    <tr>
+                        <td>{book.id}</td>
+                        <td>{book.title}</td>
+                        <td>{book.author}</td>
+                        <td>{book.year}</td>
+                        <td>{book.image}</td>
+                    </tr>
+                </tbody>
             </table>
             <br>
             </br>
             <br />
+            <h1>Change To:</h1>
             <form>
                 <label htmlFor="bookid">Book ID: </label>&nbsp;
                 <input type="text" name="bookid" id="bookid" />

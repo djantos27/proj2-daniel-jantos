@@ -1,0 +1,8 @@
+.books_table td, .books_table th {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.books_table {
+    border-collapse: collapse;
+}

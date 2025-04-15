@@ -11,7 +11,7 @@ export default async function Books()
 
     return (
         <div>
-            <h2><Link href={`/create`}>Create</Link></h2>
+            <h2><Link href={`/admin/create`}>Create</Link></h2>
             <h1>Table for Books</h1>
             <table className={styles.books_table}>
                 <thead>
@@ -34,7 +34,7 @@ export default async function Books()
                                 <td>{book.author}</td>
                                 <td>{book.year}</td>
                                 <td>{book.image}</td>
-                                <td><Link href={`/edit/${book.id}`}>E</Link></td>
+                                <td><Link href={`/admin/edit/${book.id}`}>E</Link></td>
                                 <td>D</td>
                             </tr>
                         )   )
