@@ -1,9 +1,9 @@
-// Single ID page to display all params from one single book
+// Edit page
 
 import styles from "./styles.module.css";
 import Link from "next/link";
 
-export default async function Singlebook({params}) 
+export default async function Edit({params}) 
 {
     const { bookid } = await params; 
     const data = await fetch(`http://localhost:4000/books/${bookid}`);
@@ -13,7 +13,7 @@ export default async function Singlebook({params})
         return (
             <div>
                 <h1>Book not found</h1>
-                <h2><Link href={`/collection`}>Back</Link></h2>
+                <h2><Link href={`/admin`}>Back</Link></h2>
             </div>
             )
         }
@@ -36,7 +36,7 @@ export default async function Singlebook({params})
             </table>
             <br>
             </br>
-            <h2><Link href={`/collection`}>Back</Link></h2>
+            <h2><Link href={`/admin`}>Back</Link></h2>
         </div>
     )
 }
