@@ -5,7 +5,8 @@ import Link from "next/link";
 
 export default async function Singlebook({params}) 
 {
-    const data = await fetch(`http://localhost:4000/books/${params.bookid}`);
+    const { bookid } = await params;
+    const data = await fetch(`http://localhost:4000/books/${bookid}`);
     if (!data.ok) 
         {
         return (
@@ -36,4 +37,16 @@ export default async function Singlebook({params})
             <h2><Link href={`/collection`}>Back</Link></h2>
         </div>
     )
+}
+
+// Generate static params
+
+export async function generateStaticParams()
+{
+    const data = await fetch("http://localhost:4000/books");
+    const books = await data.json();
+
+    return books.map( (book) =>{
+        bookid: book.id
+    } );
 }
