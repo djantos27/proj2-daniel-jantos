@@ -5,8 +5,9 @@ import Link from "next/link";
 
 export default async function Singlebook({params}) 
 {
-    ///const { bookid } = await params; - could not get to work, will come back if there is time
-    const data = await fetch(`http://localhost:4000/books/${params.bookid}`);
+    const { bookid } = await params; //- could not get to work, will come back if there is time
+    const data = await fetch(`http://localhost:4000/books/${bookid}`);
+    //console.log(params)
     if (!data.ok) 
         {
         return (
@@ -31,10 +32,10 @@ export default async function Singlebook({params})
                         <th>{book.year}</th>
                         <th>{book.image}</th>
                     </tr>
-                    <br>
-                    </br>
                 </thead>
             </table>
+            <br>
+            </br>
             <h2><Link href={`/collection`}>Back</Link></h2>
         </div>
     )
@@ -42,12 +43,12 @@ export default async function Singlebook({params})
 
 // Generate static params
 
-export async function generateStaticParams()
-{
-    const data = await fetch("http://localhost:4000/books");
-    const books = await data.json();
+// export async function generateStaticParams()
+// {
+//     const data = await fetch("http://localhost:4000/books");
+//     const books = await data.json();
 
-    return books.map( (book) =>{
-        bookid: book.id
-    } );
-}
+//     return books.map( (book) =>{
+//         booksid: book.id
+//     } );
+// }
