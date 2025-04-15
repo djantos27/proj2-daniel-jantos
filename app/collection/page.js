@@ -15,7 +15,7 @@ export default async function List()
                             <ul key ={book.id}>
                                 <dt>{book.id}&nbsp;
                                     {book.title}&nbsp;
-                                    More</dt>
+                                    <link href={'/collection/${book.id}'}>More</link></dt>
                             </ul>
                         )   )
                     }
