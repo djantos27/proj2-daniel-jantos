@@ -1,3 +1,6 @@
+//Admin Page -  should have all books, and information presented in a table
+//              with ability to click on edit or delete
+
 import styles from "./styles.module.css";
 
 export default async function Books()
