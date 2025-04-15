@@ -5,8 +5,8 @@ import Link from "next/link";
 
 export default async function Singlebook({params}) 
 {
-    const { bookid } = await params;
-    const data = await fetch(`http://localhost:4000/books/${bookid}`);
+    ///const { bookid } = await params; - could not get to work, will come back if there is time
+    const data = await fetch(`http://localhost:4000/books/${params.bookid}`);
     if (!data.ok) 
         {
         return (
@@ -17,6 +17,7 @@ export default async function Singlebook({params})
             )
         }
     const book = await data.json();
+    console.log("this is book data", book)
 
     return (
         <div>
