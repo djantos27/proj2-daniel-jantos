@@ -1,16 +1,30 @@
+'use client';
+
 //Admin Page -  should have all books, and information presented in a table
 //              with ability to click on edit or delete
 
 import styles from "./styles.module.css";
 import Link from "next/link";
+//import { revalidatePath } from "next/cache";
 
 export default async function Books()
 {
     const data = await fetch("http://localhost:4000/books");
     const books = await data.json();
 
+    async function deleteBook(bookid) {
+
+        await fetch(`http://localhost:4000/books/${bookid}`, {
+          method: 'DELETE',
+        });
+      
+        location.reload();
+      }
+
     return (
         <div>
+            <Link href="/collection"><button>Navigate to Collection</button></Link>
+            <br />
             <h2><Link href={`/admin/create`}>Create</Link></h2>
             <h1>Table for Books</h1>
             <table className={styles.books_table}>
@@ -35,7 +49,7 @@ export default async function Books()
                                 <td>{book.year}</td>
                                 <td><img src={book.image} alt="cover" width="100" /></td>
                                 <td><Link href={`/admin/edit/${book.id}`}>E</Link></td>
-                                <td>D</td>
+                                <td onClick={() => deleteBook(book.id)}>D</td>
                             </tr>
                         )   )
                     }

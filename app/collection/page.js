@@ -11,6 +11,8 @@ export default async function List()
 
     return (
         <div>
+            <Link href="/admin"><button>Navigate to Admin</button></Link>
+            <br />
             <h1>List for Books</h1>
                     {
                         books.map( (book) => (

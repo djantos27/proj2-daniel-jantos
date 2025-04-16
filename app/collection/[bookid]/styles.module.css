@@ -1,8 +1,22 @@
-.books_table td, .books_table th {
-    border: 1px solid black;
-    padding: 5px;
-}
-
 .books_table {
+    width: 90%;
     border-collapse: collapse;
-}
+    margin-top: 20px;
+    font-family: sans-serif;
+  }
+  
+  .books_table th,
+  .books_table td {
+    border: 1px solid black;
+    padding: 7px;
+    text-align: left;
+  }
+  
+  .books_table th {
+    background-color: #e4e4e4;
+  }
+  
+  .books_table img {
+    max-height: 100px;
+  }
+  
