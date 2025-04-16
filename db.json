@@ -22,20 +22,6 @@
       "image": "jpeg"
     },
     {
-      "id": "4",
-      "title": "Book 4",
-      "author": "Rita",
-      "year": "2019",
-      "image": "jpeg"
-    },
-    {
-      "id": "5",
-      "title": "Book 5",
-      "author": "Alex",
-      "year": "2017",
-      "image": "jpeg"
-    },
-    {
       "id": "6",
       "title": "Book 6",
       "author": "Alex",
@@ -45,13 +31,6 @@
     {
       "id": "7",
       "title": "Book 7",
-      "author": "Alex",
-      "year": "2017",
-      "image": "jpeg"
-    },
-    {
-      "id": "8",
-      "title": "Book 8",
       "author": "Alex",
       "year": "2017",
       "image": "jpeg"
