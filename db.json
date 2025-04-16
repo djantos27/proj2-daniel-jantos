@@ -8,13 +8,6 @@
       "image": "jpeg"
     },
     {
-      "id": "2",
-      "title": "Book 2",
-      "author": "Bruce",
-      "year": "2012",
-      "image": "jpeg"
-    },
-    {
       "id": "3",
       "title": "Book 3",
       "author": "Dale",
@@ -61,6 +54,13 @@
       "title": "The Way of Kings",
       "author": "Brandon Sanderson",
       "year": "2011",
+      "image": "https://m.media-amazon.com/images/I/81cO02Zz6VL._UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": "33",
+      "title": "Best one",
+      "author": "Brandon Sanderson",
+      "year": "2019",
       "image": "https://m.media-amazon.com/images/I/81cO02Zz6VL._UF894,1000_QL80_.jpg"
     }
   ]

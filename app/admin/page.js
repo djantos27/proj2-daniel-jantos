@@ -18,7 +18,7 @@ export default async function Books()
             method: "DELETE"});
 
         revalidatePath("/admin");
-        revalidatePath("collection");
+        revalidatePath("/collection");
     };
 
     return (
