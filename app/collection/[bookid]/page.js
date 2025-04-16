@@ -30,7 +30,7 @@ export default async function Singlebook({params})
                         <th>{book.title}</th>
                         <th>{book.author}</th>
                         <th>{book.year}</th>
-                        <th>{book.image}</th>
+                        <th><img src={book.image} alt="cover" width="50" /></th>
                     </tr>
                 </thead>
             </table>

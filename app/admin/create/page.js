@@ -2,10 +2,11 @@
 
 import styles from "./styles.module.css";
 import Link from "next/link";
+import { revalidatePath } from "next/cache";
 
-export default async function Edit({params}) 
+export default async function Create() 
 {
-    const { bookid } = await params; 
+    //const { bookid } = await params; 
     const data = await fetch(`http://localhost:4000/books`);
     //console.log(params)
     if (!data.ok) 
@@ -20,10 +21,42 @@ export default async function Edit({params})
     const book = await data.json();
     //console.log("this is book data", book)
 
+    async function createBook(formData)
+    {
+        'use server'
+
+        const rawFormData = {
+            bookid: formData.get("bookid"),
+            title: formData.get("title"),
+            author: formData.get("author"),
+            year: formData.get("year"),
+            image: formData.get("image")
+        };
+
+        await fetch("http://localhost:4000/books",{
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body: JSON.stringify({
+                    id: rawFormData.bookid,
+                    title: rawFormData.title,
+                    author: rawFormData.author,
+                    year: rawFormData.year,
+                    image: rawFormData.image
+                })
+        })
+
+        revalidatePath("/admin");
+        revalidatePath("/collection");
+
+        //console.log(formData)
+    }
+
     return (
         <div>
             <h1>Add New Book:</h1>
-            <form>
+            <form action ={createBook}>
                 <label htmlFor="bookid">Book ID: </label>&nbsp;
                 <input type="text" name="bookid" id="bookid" />
                 <br />

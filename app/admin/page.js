@@ -33,7 +33,7 @@ export default async function Books()
                                 <td>{book.title}</td>
                                 <td>{book.author}</td>
                                 <td>{book.year}</td>
-                                <td>{book.image}</td>
+                                <td><img src={book.image} alt="cover" width="50" /></td>
                                 <td><Link href={`/admin/edit/${book.id}`}>E</Link></td>
                                 <td>D</td>
                             </tr>

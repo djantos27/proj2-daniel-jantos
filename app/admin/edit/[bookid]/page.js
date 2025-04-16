@@ -39,7 +39,7 @@ export default async function Edit({params})
                         <td>{book.title}</td>
                         <td>{book.author}</td>
                         <td>{book.year}</td>
-                        <td>{book.image}</td>
+                        <td><img src={book.image} alt="cover" width="50" /></td>
                     </tr>
                 </tbody>
             </table>
@@ -63,6 +63,7 @@ export default async function Edit({params})
                 <label htmlFor="image">Link to Cover jpeg: </label>&nbsp;
                 <input type="jpeg" name="image" id="image" />
                 <br />
+                <input type="submit" />
             </form>
             <h2><Link href={`/admin`}>Back</Link></h2>
         </div>
