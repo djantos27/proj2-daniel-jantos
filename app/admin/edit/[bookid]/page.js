@@ -39,7 +39,7 @@ export default async function Edit({params})
                         <td>{book.title}</td>
                         <td>{book.author}</td>
                         <td>{book.year}</td>
-                        <td><img src={book.image} alt="cover" width="50" /></td>
+                        <td><img src={book.image} alt="cover" width="100" /></td>
                     </tr>
                 </tbody>
             </table>
